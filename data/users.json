@@ -1,0 +1,48 @@
+{
+  "mario": {
+    "username": "mario",
+    "password": "rossi",
+    "gamesPlayed": 2,
+    "gamesWon": 0,
+    "gamesLost": 1,
+    "lastScore": 0,
+    "bestScore": 0,
+    "totalScore": -16,
+    "currentStreak": 0,
+    "maxStreak": 0,
+    "perfectGames": 1,
+    "oneMistakeGames": 0,
+    "twoMistakeGames": 0,
+    "threeMistakeGames": 0,
+    "fourMistakeGames": 1,
+    "gamesNotFinished": 0,
+    "scoreHistory": [
+      -16,
+      0
+    ]
+  },
+  "giulio": {
+    "username": "giulio",
+    "password": "cesare",
+    "gamesPlayed": 4,
+    "gamesWon": 2,
+    "gamesLost": 0,
+    "lastScore": 10,
+    "bestScore": 14,
+    "totalScore": 26,
+    "currentStreak": 1,
+    "maxStreak": 1,
+    "perfectGames": 1,
+    "oneMistakeGames": 2,
+    "twoMistakeGames": 1,
+    "threeMistakeGames": 0,
+    "fourMistakeGames": 0,
+    "gamesNotFinished": 2,
+    "scoreHistory": [
+      14,
+      0,
+      2,
+      10
+    ]
+  }
+}

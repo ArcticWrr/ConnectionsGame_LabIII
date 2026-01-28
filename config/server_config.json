@@ -1,0 +1,5 @@
+{
+  "port": 8080,
+  "gamesFilePath": "data/Connections_Data.json",
+  "gameDuration": 5
+}

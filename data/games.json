@@ -1,0 +1,131 @@
+{
+  "currentGameId": 338,
+  "remainingTimeMillis": 299,
+  "gameHistory": {
+    "67": {
+      "giulio": {
+        "username": "giulio",
+        "gameId": 67,
+        "mistakes": 2,
+        "foundThemes": [
+          "UNITS OF VOLUME",
+          "EXTREMELY",
+          "WORLD CURRENCIES"
+        ],
+        "foundWords": [
+          "PINT",
+          "CUP",
+          "GALLON",
+          "QUART",
+          "AWFUL",
+          "SUPER",
+          "VERY",
+          "QUITE",
+          "REAL",
+          "WON",
+          "RAND",
+          "STERLING"
+        ],
+        "isFinished": true,
+        "isWon": true,
+        "isLost": false,
+        "alreadySaved": true,
+        "currentScore": 10
+      }
+    },
+    "405": {
+      "mario": {
+        "username": "mario",
+        "gameId": 405,
+        "mistakes": 0,
+        "foundThemes": [],
+        "foundWords": [],
+        "isFinished": true,
+        "isWon": false,
+        "isLost": false,
+        "alreadySaved": true,
+        "currentScore": 0
+      }
+    },
+    "105": {
+      "giulio": {
+        "username": "giulio",
+        "gameId": 105,
+        "mistakes": 1,
+        "foundThemes": [
+          "BRIDAL ACCESSORIES"
+        ],
+        "foundWords": [
+          "TRAIN",
+          "RING",
+          "BOUQUET",
+          "VEIL"
+        ],
+        "isFinished": true,
+        "isWon": false,
+        "isLost": false,
+        "alreadySaved": true,
+        "currentScore": 2
+      }
+    },
+    "298": {
+      "giulio": {
+        "username": "giulio",
+        "gameId": 298,
+        "mistakes": 0,
+        "foundThemes": [],
+        "foundWords": [],
+        "isFinished": true,
+        "isWon": false,
+        "isLost": false,
+        "alreadySaved": true,
+        "currentScore": 0
+      }
+    },
+    "235": {
+      "mario": {
+        "username": "mario",
+        "gameId": 235,
+        "mistakes": 4,
+        "foundThemes": [],
+        "foundWords": [],
+        "isFinished": true,
+        "isWon": false,
+        "isLost": true,
+        "alreadySaved": true,
+        "currentScore": -16
+      }
+    },
+    "283": {
+      "giulio": {
+        "username": "giulio",
+        "gameId": 283,
+        "mistakes": 1,
+        "foundThemes": [
+          "\"CHAT, INFORMALLY\"",
+          "FEMALE ANIMALS",
+          "PALINDROMES"
+        ],
+        "foundWords": [
+          "YAK",
+          "JAW",
+          "YAP",
+          "GAB",
+          "COW",
+          "EWE",
+          "DOE",
+          "HEN",
+          "POP",
+          "EYE",
+          "GAG",
+          "BIB"
+        ],
+        "isFinished": true,
+        "isWon": true,
+        "isLost": false,
+        "alreadySaved": true,
+        "currentScore": 14
+      }
+    }
+  }
+}
