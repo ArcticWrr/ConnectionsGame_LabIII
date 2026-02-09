@@ -1,0 +1,3 @@
+Main-Class: server.network.ServerMain
+Class-Path: lib/gson-2.13.2.jar
+

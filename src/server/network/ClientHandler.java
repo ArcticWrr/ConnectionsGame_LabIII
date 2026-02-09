@@ -52,29 +52,32 @@ public class ClientHandler implements Runnable {
                     String responseJson = gson.toJson(response);
                     out.println(responseJson); //Invia risposta a client
 
-                    UserGameState currentState = gameManager.getServerGameState().getPlayerState(this.loggedUser.getUsername(), gameManager.getCurrentGame().getGameId());
+                    if (this.loggedUser != null) {
+                        UserGameState currentState = gameManager.getServerGameState().getPlayerState(this.loggedUser.getUsername(), gameManager.getCurrentGame().getGameId());
 
-                    if (currentState != null && currentState.isWon()) {
-                        //notifica asincrona UDP per vittoria
-                        GameMessage notification = new GameMessage();
-                        notification.operation = "GAME_WON";
-                        notification.gameId = gameManager.getCurrentGame().getGameId();
-                        notification.message = "Partita vinta! aspetta avvio di una nuova partita";
-                        notification.remainingTime = gameManager.getGameTimer().getRemainingSeconds();
-                        notification.rankingList = userManager.getGlobalRanking();
-                        gameManager.getNotificationService().send(notification, this.loggedUser.getUsername());
+                        if (currentState != null && currentState.isWon()) {
+                            //notifica asincrona UDP per vittoria
+                            GameMessage notification = new GameMessage();
+                            notification.operation = "GAME_WON";
+                            notification.gameId = gameManager.getCurrentGame().getGameId();
+                            notification.message = "Partita vinta! aspetta avvio di una nuova partita";
+                            notification.remainingTime = gameManager.getGameTimer().getRemainingSeconds();
+                            notification.rankingList = userManager.getGlobalRanking();
+                            gameManager.getNotificationService().send(notification, this.loggedUser.getUsername());
+                        }
+
+                        if (currentState != null && currentState.isLost()) {
+                            //notifica asincrona UDP per vittoria
+                            GameMessage notification = new GameMessage();
+                            notification.operation = "GAME_LOST";
+                            notification.gameId = gameManager.getCurrentGame().getGameId();
+                            notification.message = "Partita persa! aspetta avvio di una nuova partita";
+                            notification.remainingTime = gameManager.getGameTimer().getRemainingSeconds();
+                            notification.rankingList = userManager.getGlobalRanking();
+                            gameManager.getNotificationService().send(notification, this.loggedUser.getUsername());
+                        }
                     }
 
-                    if (currentState != null && currentState.isLost()) {
-                        //notifica asincrona UDP per vittoria
-                        GameMessage notification = new GameMessage();
-                        notification.operation = "GAME_LOST";
-                        notification.gameId = gameManager.getCurrentGame().getGameId();
-                        notification.message = "Partita persa! aspetta avvio di una nuova partita";
-                        notification.remainingTime = gameManager.getGameTimer().getRemainingSeconds();
-                        notification.rankingList = userManager.getGlobalRanking();
-                        gameManager.getNotificationService().send(notification, this.loggedUser.getUsername());
-                    }
                 } catch (Exception e) {
                     // L'errore viene catturato QUI, il ciclo WHILE continua!
                     System.err.println("Errore nell'elaborazione della richiesta: " + e.getMessage());
@@ -118,6 +121,11 @@ public class ClientHandler implements Runnable {
                 break;
 
             case "LOGOUT":
+                if (this.loggedUser == null) {
+                    response.success = false;
+                    response.message = "Devi essere loggato per effettuare il logout.";
+                    response.operation ="LOGOUT_RESPONSE";
+                }
                 response = logoutResponse();
                 break;
 
@@ -264,17 +272,13 @@ public class ClientHandler implements Runnable {
         UserGameState userState = gameManager.getServerGameState().getPlayerState(loggedUser.getUsername(), currentGame.gameId);
         response.operation = "LOGOUT_RESPONSE";
 
-        if (this.loggedUser != null) {
-            String username = this.loggedUser.getUsername();
-            notificationServiceUDP.unregisterClient(loggedUser.getUsername()); //togli porta UDP
-            this.loggedUser = null; // Rimuoviamo il riferimento: l'utente non è più loggato
-            response.success = true;
-            response.message = "Arrivederci " + username + ", a presto!";
-            System.out.println("Server: Logout effettuato per " + username);
-        } else {
-            response.success = false;
-            response.message = "Devi essere loggato per effettuare il logout.";
-        }
+        String username = this.loggedUser.getUsername();
+        notificationServiceUDP.unregisterClient(loggedUser.getUsername()); //togli porta UDP
+        this.loggedUser = null; // Rimuoviamo il riferimento: l'utente non è più loggato
+        response.success = true;
+        response.message = "Arrivederci " + username + ", a presto!";
+        System.out.println("Server: Logout effettuato per " + username);
+
         return response;
     }
 

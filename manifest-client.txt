@@ -1,0 +1,3 @@
+Main-Class: client.ClientMain
+Class-Path: lib/gson-2.13.2.jar
+

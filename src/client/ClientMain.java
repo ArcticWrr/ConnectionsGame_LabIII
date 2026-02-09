@@ -48,7 +48,7 @@ public class ClientMain {
             e.printStackTrace();
         }
     }
-
+    //write e read sul/dal channel, clear prima di read flip prima di write
     private static void sendJson(SocketChannel clientChannel, String jsonRequest) throws IOException {
         if (!jsonRequest.endsWith("\n")) jsonRequest += "\n";
         byte[] messageBytes = jsonRequest.getBytes(StandardCharsets.UTF_8);

@@ -26,7 +26,6 @@ public class ServerMain {
             //Caricamento dati partite
             List<Game> allGames = GameLoader.loadGames(config.gamesFilePath);
             System.out.println("Database con " + allGames.size() + " partite pronto.");
-            System.out.println("Database con " + allGames.size() + " partite pronto.");
 
             NotificationServiceUDP notificationServiceUDP = new NotificationServiceUDP();
             UserManager userManager = new UserManager();
