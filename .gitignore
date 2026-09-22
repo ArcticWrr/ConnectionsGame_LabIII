@@ -1,30 +1,48 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
+# Output di compilazione e archivi generati
+*.class
+/out/
+/bin/
+/build/
+/target/
+/dist/
+*.jar
+# Gson è una dipendenza inclusa nel progetto: deve restare versionata.
+!/lib/*.jar
 
-### Eclipse ###
-.apt_generated
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+.kotlin/
+
+# Eclipse
+.apt_generated/
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+.sts4-cache/
 
-### NetBeans ###
+# NetBeans e VS Code
 /nbproject/private/
 /nbbuild/
-/dist/
 /nbdist/
 /.nb-gradle/
-
-### VS Code ###
 .vscode/
 
-### Mac OS ###
+# File del sistema operativo
 .DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Log, file temporanei e copie di backup degli editor
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+hs_err_pid*
+replay_pid*

@@ -1,65 +1,4 @@
 {
-  "livia": {
-    "username": "livia",
-    "password": "gori",
-    "gamesPlayed": 1,
-    "gamesWon": 0,
-    "gamesLost": 0,
-    "lastScore": 6,
-    "bestScore": 6,
-    "totalScore": 6,
-    "currentStreak": 0,
-    "maxStreak": 0,
-    "perfectGames": 0,
-    "oneMistakeGames": 0,
-    "twoMistakeGames": 0,
-    "threeMistakeGames": 0,
-    "fourMistakeGames": 0,
-    "gamesNotFinished": 1,
-    "scoreHistory": [
-      6
-    ]
-  },
-  "matteo": {
-    "username": "matteo",
-    "password": "scimma",
-    "gamesPlayed": 0,
-    "gamesWon": 0,
-    "gamesLost": 0,
-    "lastScore": 0,
-    "bestScore": 0,
-    "totalScore": 0,
-    "currentStreak": 0,
-    "maxStreak": 0,
-    "perfectGames": 0,
-    "oneMistakeGames": 0,
-    "twoMistakeGames": 0,
-    "threeMistakeGames": 0,
-    "fourMistakeGames": 0,
-    "gamesNotFinished": 0,
-    "scoreHistory": []
-  },
-  "io": {
-    "username": "io",
-    "password": "ciao",
-    "gamesPlayed": 1,
-    "gamesWon": 1,
-    "gamesLost": 0,
-    "lastScore": 18,
-    "bestScore": 18,
-    "totalScore": 18,
-    "currentStreak": 1,
-    "maxStreak": 1,
-    "perfectGames": 1,
-    "oneMistakeGames": 0,
-    "twoMistakeGames": 0,
-    "threeMistakeGames": 0,
-    "fourMistakeGames": 0,
-    "gamesNotFinished": 0,
-    "scoreHistory": [
-      18
-    ]
-  },
   "pio": {
     "username": "pio",
     "password": "esposito",
@@ -146,24 +85,5 @@
       10,
       0
     ]
-  },
-  "pino": {
-    "username": "pino",
-    "password": "a",
-    "gamesPlayed": 0,
-    "gamesWon": 0,
-    "gamesLost": 0,
-    "lastScore": 0,
-    "bestScore": 0,
-    "totalScore": 0,
-    "currentStreak": 0,
-    "maxStreak": 0,
-    "perfectGames": 0,
-    "oneMistakeGames": 0,
-    "twoMistakeGames": 0,
-    "threeMistakeGames": 0,
-    "fourMistakeGames": 0,
-    "gamesNotFinished": 0,
-    "scoreHistory": []
   }
 }
